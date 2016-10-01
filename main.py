@@ -13,13 +13,14 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
 
-class StudentHandler(webapp2.RequestHandler):
+class DormHandler(webapp2.RequestHandler):
     def get(self):
-        template_vals = {'student':student}
-        template = jinja_environment.get_template("student.html")
+        template = jinja_environment.get_template("dorm.html")
         self.response.write(template.render(template_vals))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/dorm', DormHandler)
 ], debug=True)
+
+#help please
