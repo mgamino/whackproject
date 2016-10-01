@@ -1,0 +1,44 @@
+/*
+Author : Onextrapixel
+URL: http://www.onextrapixel.com
+*/
+
+* {
+	border:none; 
+	margin:0; 
+	padding:0;
+}
+
+body {
+	background:#fff; 
+	color: #999999; 
+	font:12.35px Georgia, Arial, "Lucida Grande", Verdana, sans-serif;
+}
+
+a:link, a:visited {
+	color:#0054a6;
+	text-decoration:none; 
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+p {
+	margin:15px 0;
+}
+
+h1 {
+	font-size:20px;
+	margin-bottom:20px; 
+}
+
+#wrap {
+	margin:10px auto;
+	width:900px;
+}
+
+#wrap img {
+	display:block;
+	margin:0 auto; 
+}
