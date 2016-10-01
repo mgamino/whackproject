@@ -13,14 +13,33 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
 
-class DormHandler(webapp2.RequestHandler):
+# class DormHandler(webapp2.RequestHandler):
+#     def get(self):
+#         template = jinja_environment.get_template("dorm.html")
+#         self.response.write(template.render)
+
+class BeebeHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template("dorm.html")
+        #template = jinja_environment.get_template("beebe.html")
+        self.response.write(jinja_environment.get_template("beebe.html").render)
+
+class McAfeeHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template("mcafee.html")
         self.response.write(template.render)
+
+class TowerHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template("tower.html")
+        self.response.write(template.render)
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/dorm', DormHandler)
+    ('/beebe', BeebeHandler),
+    ('/mcafee', McAfeeHandler),
+    ('/tower', TowerHandler)
 ], debug=True)
 
 #help please
