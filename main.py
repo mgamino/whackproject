@@ -16,7 +16,7 @@ class MainHandler(webapp2.RequestHandler):
 class DormHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template("dorm.html")
-        self.response.write(template.render(template_vals))
+        self.response.write(template.render)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
