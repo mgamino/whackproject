@@ -112,6 +112,10 @@ h1, h2, h3 {
     margin: 25px;  
 }
 
+.icontext{
+    padding: 15px;
+}
+
 #building {
     position: relative;
 }
