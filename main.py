@@ -47,6 +47,7 @@ class IconCreditHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
+    ('/main.html', MainHandler),
     ('/beebe', BeebeHandler),
     ('/beebe.html', BeebeHandler),
     ('/mcafee', McAfeeHandler),
