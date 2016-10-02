@@ -32,9 +32,9 @@ class TowerHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template("tower.html")
         self.response.write(template.render())
 
-class WhyHandler(webapp2.RequestHandler):
+class WhoWhyWhatHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template("why.html")
+        template = jinja_environment.get_template("whowhywhat.html")
         self.response.write(template.render())
 
 
@@ -44,7 +44,7 @@ app = webapp2.WSGIApplication([
     ('/beebe', BeebeHandler),
     ('/mcafee', McAfeeHandler),
     ('/tower', TowerHandler),
-    ('/why', WhyHandler)
+    ('/whowhywhat', WhyHandler)
 ], debug=True)
 
 #help please
