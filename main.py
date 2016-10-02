@@ -38,6 +38,11 @@ class WhoWhyWhatHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template("whowhywhat.html")
         self.response.write(template.render())
 
+class IconCreditHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template("iconcredit.html")
+        self.response.write(template.render())
+
 
 
 app = webapp2.WSGIApplication([
@@ -49,7 +54,9 @@ app = webapp2.WSGIApplication([
     ('/tower', TowerHandler),
     ('/tower.html', TowerHandler),
     ('/whowhywhat', WhoWhyWhatHandler),
-    ('/whowhywhat.html', WhoWhyWhatHandler)
+    ('/whowhywhat.html', WhoWhyWhatHandler),
+    ('/iconcredit', IconCreditHandler),
+    ('/iconcredit.html', IconCreditHandler)
 ], debug=True)
 
 #help please
