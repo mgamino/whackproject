@@ -53,10 +53,27 @@ h1, h2 {
 }
 
 .iconbox {   
-    
+    position: relative;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 200px; 
+    height: 200px; 
+    padding: 15px;
+   
 }
 
-.icon
+.iconbox:hover {
+    border: 1px solid black;
+    transition: 0.75s;
+    opacity: 0.50; 
+}
+
+.icon {
+    width: 100%;
+}
 
 
 
