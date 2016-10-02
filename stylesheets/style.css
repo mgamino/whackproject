@@ -40,7 +40,7 @@
     background-color: white; 
 }
 
-p { 
+p, li { 
     font-family: 'Work Sans', 'sans-serif'; 
     padding: 5px;
     padding-left: 50px;
@@ -50,9 +50,7 @@ p {
 h1, h2 {
     font-family: 'Josefin Sans', 'sans-serif'; 
     text-align: center;
-    background-color: rgb(204,204,230); 
-    border: 3px solid black;
-    width: 45%;
+    font-size: 200%;
     margin:auto;
     padding:5px;
 }
@@ -69,6 +67,15 @@ h1, h2 {
     height:100%;
 }
 
+.icondecor {   
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 75px; 
+    height: 75px; 
+    padding: 10px;
+    margin: 10px;  
+}
 
 .iconbox {   
     position: relative;
@@ -79,8 +86,7 @@ h1, h2 {
     width: 150px; 
     height: 150px; 
     padding: 20px;
-    margin: 25px;
-   
+    margin: 25px;  
 }
 
 .label {
