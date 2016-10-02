@@ -10,7 +10,8 @@ jinja_environment = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template("main.html")
+        self.response.write(template.render())
 
 # class DormHandler(webapp2.RequestHandler):
 #     def get(self):
@@ -32,9 +33,9 @@ class TowerHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template("tower.html")
         self.response.write(template.render())
 
-class WhyHandler(webapp2.RequestHandler):
+class WhoWhyWhatHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template("why.html")
+        template = jinja_environment.get_template("whowhywhat.html")
         self.response.write(template.render())
 
 
@@ -42,9 +43,13 @@ class WhyHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/beebe', BeebeHandler),
+    ('/beebe.html', BeebeHandler),
     ('/mcafee', McAfeeHandler),
+    ('/mcafee.html', McAfeeHandler),
     ('/tower', TowerHandler),
-    ('/why', WhyHandler)
+    ('/tower.html', TowerHandler),
+    ('/whowhywhat', WhoWhyWhatHandler),
+    ('/whowhywhat.html', WhoWhyWhatHandler)
 ], debug=True)
 
 #help please
